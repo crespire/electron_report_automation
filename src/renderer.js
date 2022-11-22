@@ -27,3 +27,4 @@
  */
 
 import './react.js';
+console.log('Loaded react.js');
