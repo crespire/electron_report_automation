@@ -1,4 +1,4 @@
-const { app, BrowserWindow, session } = require('electron');
+const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
 import installExtension, { REACT_DEVELOPER_TOOLS } from 'electron-devtools-installer';
 
@@ -54,7 +54,12 @@ app.whenReady().then(() => {
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and import them here.
 
+ipcMain.on('submitForm', (event, data) => {
+  console.log('Got form event');
+  console.log(event);
+  console.log(data);
+});
 
-// TO-DO: Receive form data
+// TO-DO: Get JSON from Clockify API
 // TO-DO: Generate PDF (react-pdf/renderer)
 // TO-DO: Generate XLSX (SheetJS) Can I do this client side? Looks like SheetJS lets me.

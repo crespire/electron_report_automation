@@ -5,3 +5,9 @@ body {
   max-width: 38rem;
   padding: 2rem;
 }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
