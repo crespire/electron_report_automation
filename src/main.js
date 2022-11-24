@@ -54,6 +54,7 @@ app.whenReady().then(() => {
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and import them here.
 
+// Listen for form submit
 ipcMain.on('submitForm', (event, data) => {
   console.log('Got form event');
   console.log(event);
@@ -61,5 +62,5 @@ ipcMain.on('submitForm', (event, data) => {
 });
 
 // TO-DO: Get JSON from Clockify API
-// TO-DO: Generate PDF (react-pdf/renderer)
+// TO-DO: Generate PDF (ejs+puppeteer)
 // TO-DO: Generate XLSX (SheetJS) Can I do this client side? Looks like SheetJS lets me.
